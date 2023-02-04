@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  background: url("https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80");
+  background-size: cover;
+  overflow-y: hidden;
+  height: 100vh;
+  display: flex;
+}
+
+.container {
+  display: flex;
+  margin: 1rem;
+  overflow-y: hidden;
+  border: 2px solid #fbffff;
+  overflow-x: scroll;
+  align-items: center;
+  perspective: 500px;
+  transition: all 0.3s ease;
+  padding: 100px;
+  width: 100%;
+  white-space: pre;
+}
+
+.item {
+  border: inset 10px rgba(0, 0, 0, 0.063);
+  padding: 10rem 4rem;
+  font-size: 4rem;
+  color: #fbffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: -0.3rem;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.container.active {
+  cursor: move; /* fallback if grab cursor is unsupported */
+  cursor: grabbing;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+  transform: scale(1.05);
+  background-color: #fbffff57;
+}
+
+.item:nth-child(odd) {
+  transform: rotateY(30deg) scale(1.1);
+}
+
+.item:nth-child(even) {
+  transform: rotateY(-30deg) scale(1.1);
+}
+
+.item:nth-child(5n-4) {
+  background-color: #326ed7;
+}
+.item:nth-child(5n-3) {
+  background-color: #bbbcdd;
+}
+.item:nth-child(5n-2) {
+  background-color: #659bdd;
+}
+.item:nth-child(5n-1) {
+  background-color: #e4b2d8;
+}
+.item:nth-child(5n) {
+  background-color: #8580ba;
+}
